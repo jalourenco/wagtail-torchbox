@@ -171,6 +171,22 @@
 
 	/*Homepage*/
 
+	.arrow{
+	    display: block;
+	    margin: 4em 0 0 -0.8em;
+	    height: 6em;
+	    width: 6em;
+	    background-image: url("/static/torchbox/images/arrow_down.png");
+	    background-repeat: no-repeat;
+	    transition: 0.2s ease;
+	    cursor: pointer;
+	}
+
+	.arrow:hover{
+	    background-image: url("/static/torchbox/images/arrow_down2.png");
+	    opacity: 0.5;
+	}
+
 	.page-homepage .blog {
 		padding: 2em 0;
 		margin-bottom: 5px;
@@ -233,7 +249,7 @@
 
 	.page-homepage .hero {
     padding: 6em 2em;
-    background: url("/static/torchbox/images/Bristol_01.png") no-repeat center;
+    background: url("/static/torchbox/images/Homepage_hero.png") no-repeat center;
     background-color: #5b6265;
     position: relative;
     top:-3em;
@@ -247,7 +263,7 @@
 	}
 
 	.page-homepage .hero {
-		padding: 17% 2em;
+		padding: 17% 2em 7% 2em;
 		margin-top: -5em;
 	}
 
@@ -266,7 +282,7 @@
         text-align: left;
         font-size: 3em;
         line-height: 1.2em;
-        color: #93DA9F;
+        font-weight: bold;
     }
 
 	.page-homepage .hero a {
@@ -294,6 +310,10 @@
 	}
 
 	/*Standard page (we're torchbox) */
+
+	.hangingindent {
+    	text-indent: -13px ;
+	}
 
 	.page-standardpage .button{
 	    margin: 4em auto 3em auto;
@@ -523,10 +543,34 @@
 	}
 
 	/*Index pages*/
-
 	.index,
 	.single {
 	    padding: 0em 0;
+	}
+
+	/* Generic style for tags */
+	.popular-tags{
+		padding: 0 2em;
+		margin:0;
+	}
+
+	.popular-tags a {
+	    line-height: 50px;
+	}
+
+	.show a {
+		line-height: 15px;
+	}
+
+	/* TAGS Work index */
+
+	.page-workindexpage .popular-tags {
+	    margin-bottom: 0;
+	}
+
+	.page-workindexpage .popular-tags p {
+	    max-width: 100%;
+	    min-width: 96em;
 	}
 
 	/*Blog index*/
@@ -546,7 +590,7 @@
 	}
 
 	.page-blogindexpage .logo {
-		background-image: url("/static/torchbox/images/logo-torchbox-grey.png");
+		background-image: url("/static/torchbox/images/logo-torchbox-white.png");
 	}
 
 	.page-blogindexpage h2 {
@@ -645,6 +689,11 @@
 		max-height: 35em;
 		overflow: hidden;
 		margin-top: -7em;
+		position: relative;
+	}
+
+	.page-blogindexpage img.scale {
+    	display: block;
 	}
 	
 	.bleed {
@@ -659,6 +708,11 @@
 	.page-workpage	header nav li a:hover {
 		color: #EA853a;
 		border-bottom: 3px solid #EA853a;
+	}
+
+	.page-workpage .active:hover a{
+		border-bottom: none;
+		color: #fff;
 	}
 
 	.page-workpage .img-wrapper {
@@ -699,6 +753,10 @@
 		background: rgba(255, 255, 255, 1);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 		max-width: 800px;
+    }
+
+    .nextprev-nav{
+    	display: block;
     }
 
     .body-copy p,
@@ -1176,10 +1234,29 @@
 		color: #000;
 	}
 
+	.page-blogpage .active a {
+		color: #fff;
+	}
+
+	.page-blogpage .active:hover a {
+		color: #fff;
+		border:none;
+	}
+
 	.page-blogpage header nav li a:hover {
 		color: #EA853A;
 		transition: all 0.15s ease;
 		border-bottom: 3px solid #EA853A;
+	}
+
+	.page-blogpage .next{
+		right:0;
+		top: 6em;
+	}
+
+	.page-blogpage .prev{
+		left:0;
+		top: 6em;
 	}
 
 	
@@ -1203,7 +1280,6 @@
 		float: left;
 		padding: 0 1em 1em 3em;
 		transition: all 0.15s ease;
-		/*background: url("/static/torchbox/images/icon-map-pin.svg") no-repeat left top; */
 	}
 
 	footer .offices li:hover {
@@ -1277,11 +1353,6 @@
 		padding-bottom: 1em;
 		overflow: hidden;
 	}
-
-	.offices li:hover .svg{
-		margin-top: -40px;
-	}
-
 
 	.listing p {
     	margin: 0 0 1em 0;
@@ -1381,7 +1452,7 @@
 	}
 
 
-	/*Below stops the image scaling on hover*/
+	/*Below stops the image scaling on hover
 	.page-homepage .grid li .block:hover img {
 		float: left;
 		width: 166%;
@@ -1392,7 +1463,7 @@
 	.page-homepage .grid li .block:hover .author img {
 		width: 4em;
 	}
-	/*Above stops the image scaling on hover*/
+	*/
 
 
 	.page-homepage .block .workcontainer{
@@ -1460,9 +1531,12 @@
 		color: #ea853a;
 	}
 
+
+	/* Below makde the slide effect
 	.page-homepage .block:hover .crop-height {
 	  	width: 50%;
 	}
+	*/
 
 	.page-homepage .block .workcontainer{
 		overflow: visible;

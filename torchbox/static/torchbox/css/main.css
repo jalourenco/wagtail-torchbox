@@ -456,6 +456,10 @@ main nav li.active a:after {
 
 /*Page home*/
 
+.arrow{
+    display: none;
+}
+
 .hide{
     display: none;
 }
@@ -529,7 +533,7 @@ main nav li.active a:after {
 
 .page-homepage .hero {
     padding: 22em 0em 3em 0em;
-    background: url("/static/torchbox/images/Bristol_01.png") no-repeat center;
+    background: url("/static/torchbox/images/Homepage_hero.png") no-repeat center;
     background-color: #5b6265;
     position: relative;
     top: -22em;
@@ -557,8 +561,8 @@ main nav li.active a:after {
     padding: 1em 1.5em;
     line-height: 1em;
     margin: 0 1em 1em 0;
-    color: #93DA9F;
-    border: solid 1px #93DA9F;
+    color: #fff;
+    border: solid 1px #fff;
     border-radius: 2px;
     min-width: 200px;
     text-align: center;
@@ -571,9 +575,9 @@ main nav li.active a:after {
 }
 
 .page-homepage .hero .button:hover {
-    background-color: #93DA9F;
-    color: #5b6265;
-    border: solid 1px #93DA9F;
+    background-color: rgba(225,225,225, 0.5);
+    color: #fff;
+    border: solid 1px rgba(225,225,225, 0.2);
 }
 
 .page-homepage .hiring {
@@ -639,12 +643,12 @@ overflow: hidden;
         text-align: left;
         font-size: 1.8em;
         line-height: 1.2em;
-        color: #93DA9F;
+        color: #fff;
     }
 
 .page-homepage .menu-button {
-        background-color: #93DA9F;
-        color: #fff;
+        background-color: #fff;
+        color: #434a4f;
         }
 
 .page-homepage h2 a {
@@ -662,11 +666,11 @@ overflow: hidden;
 }
 
 .page-homepage h2 a:hover span {
-        position: absolute;
-        right: -0.8em;
-        -webkit-animation:spin 0.5s ease 0.1s;
-        -moz-animation:spin 0.5s linear infinite;
-        animation:spin 0.5s linear infinite;
+    position: absolute;
+    right: -0.8em;
+    -webkit-animation:spin 0.5s ease 0.1s;
+    -moz-animation:spin 0.5s linear infinite;
+    animation:spin 0.5s linear infinite;
 }
 
 .page-homepage .blog li {
@@ -866,7 +870,6 @@ font-size: 0.8em;
 }
 
 .page-jobindexpage  img {
-    display: block;
     width: 62px;
 }
 
@@ -903,6 +906,10 @@ font-size: 0.8em;
 
 .page-jobpage footer .offices h3{
     margin-bottom: 0;
+}
+
+.footerbleed{
+    padding-top: 1em;
 }
 
 .info{
@@ -1036,7 +1043,7 @@ h4 span:last-child{
 }
 
 .hangingindent {
-    text-indent: -22px ;
+    text-indent: -13px ;
 }
 
 .page-standardpage .quote {
@@ -1149,47 +1156,6 @@ h4 span:last-child{
     -webkit-font-smoothing: antialiased;
 }
 
-.page-servicespage .services li:nth-of-type(1):before {
-    content: "\f1fe";
-    font-family: "Ionicons";
-}
-
-.page-servicespage .services li:nth-of-type(2):before {
-    content: "\f202\f25d";
-    font-family: "Ionicons";
-}
-
-.page-servicespage .services li:nth-of-type(3):before {
-    content: "\f256";
-    font-family: "Ionicons";
-}
-
-.page-servicespage .services li:nth-of-type(4):before {
-    content: "\f270";
-    font-family: "Ionicons";
-}
-
-.page-servicespage .services li:nth-of-type(5):before {
-    content: "\f20a";
-    font-family: "Ionicons";
-}
-
-.page-servicespage .services li:nth-of-type(6):before {
-    content: "\f127";
-    font-family: "Ionicons";
-}
-
-.page-servicespage .services li:nth-of-type(7):before {
-    content: "\f212";
-    font-family: "Ionicons";
-}
-
-.page-servicespage .services li:nth-of-type(8):before {
-    content: "\f2b3";
-    font-family: "Ionicons";
-}
-
-
 /*Index pages*/
 
 .pagination li {
@@ -1227,7 +1193,7 @@ h4 span:last-child{
     margin-top: 0;
 }
 
-.page-blogindexpage .crop-height {
+.page-blogindexpage img.scale {
     display: none;
 }
 
@@ -1389,20 +1355,159 @@ h4 span:last-child{
 
 
 /* Generic style for tags */
-.tags a{
-    background-color: #ea853a;
-    padding:3px 5px;
-    color:white;
-    border-radius:3px;
-    -webkit-border-radius:3px;
-    text-transform:uppercase;
-    font-size:0.8em;
-}
-.tags a:hover{
-    color:white;
-    background-color: #f6a32b;
+
+.popular-tags {
+    margin: 1em 0;
+    padding: 0 1em;
 }
 
+.popular-tags h3 {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.popular-tags a {
+    padding:0.5em 1em;
+    color:#424A4F;
+    font-size:1em;
+    margin-right: 0.5em;
+    line-height: 40px;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+    border-radius: 3px;
+}
+
+.popular-tags a:hover {
+    background-color: rgba(225,225,225,1);
+    padding:0.5em 1em;
+    color:#424A4F;
+}
+
+.popular-tags a:before {
+    background-image:  url("/static/torchbox/images/tag.png");
+    background-size: 15px;
+    background-repeat: no-repeat;
+    content: "";
+    padding: 0 20px 0 0;
+    margin: 0px 5px 0 0;
+}
+
+.popular-tags p {
+    color: #424A4F;
+    margin: 0;
+}
+
+.popular-tags p span {
+    font-weight: bold;
+}
+
+.popular-tags p.show {
+   margin: 0.5em 0 1em 1em;
+}
+
+.show a {
+    transition: all 0.15s ease;
+    border-bottom: 1px dotted #424A4F;
+    padding: 0;
+    border-radius: 0;
+    margin-left: 1em;
+}
+
+.show a:hover {
+    color: #EA853A;
+    border-bottom: 1px dotted #EA853A;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+.show a:before {
+    content: none;
+}
+
+/*tags*/
+
+.tags {
+    margin-top: 2em;
+}
+
+.tags a {
+    padding:0.5em 1em;
+    color:#424A4F;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    font-size:1em;
+    margin-right: 0.5em;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+
+.tags a:before {
+    content: "\f28d";
+    font-size: 1.2em;
+    padding: 0 5px 0 0;
+    margin: 0px 5px 0 0;
+    font-family: "Ionicons";
+}
+
+.tags a:hover {
+    color:#424A4F;
+    background-color: rgba(225,225,225,1);
+}
+
+.page-workpage .tags {
+    display: inline-block;
+    margin: 0 0 0 2em;
+}
+
+
+/*Tooltips*/
+a.tooltip {
+    outline:none;
+}
+
+a.tooltip strong {
+    line-height:30px;
+}
+
+a.tooltip:hover {
+    text-decoration:none;
+} 
+
+a.tooltip span {
+    z-index:10;display:
+    none; padding:14px 20px;
+    margin-top:-30px;
+    margin-left:28px;
+    width:300px;
+    line-height:16px;
+}
+
+a.tooltip:hover span{
+    display:inline;
+    position:absolute;
+    color:#111;
+    border:1px solid #DCA;
+    background:#fffAF0;
+}
+
+.callout {
+    z-index:20;
+    position:absolute;
+    top:30px;
+    border:0;
+    left:-12px;
+}
+    
+/*CSS3 extras*/
+a.tooltip span{
+    border-radius:4px;
+    box-shadow: 5px 5px 8px #CCC;
+}
 
 /*Work index*/
 
@@ -1436,7 +1541,6 @@ h4 span:last-child{
     display: block;
     position: relative;
     min-height: 24em;
-    transition: background-color 0.2s ease;
 }
 
 .page-workindexpage main .listing div {
@@ -1463,6 +1567,10 @@ h4 span:last-child{
 
 
 /*Work page*/
+
+.nextprev-nav{
+    display: none;
+}
 
 .body-copy > *{
     max-width: 720px;
@@ -1527,13 +1635,14 @@ main .breadcrumb a {
     min-width: 100px;
     text-align: center;
     float: left;
+    transition: all 0.2s ease;
 }
 
 main .breadcrumb a:hover {
     background-color: #EA853a;
     display:inline-block;
     color: #fff;
-    transition: background-color 0.2s ease;
+    
 }
 
 .article-meta {
@@ -1551,14 +1660,12 @@ main .breadcrumb a:hover {
 }
 
 .share ul {
-    box-shadow: 0.125em 0.125em 0.5em #888888;
-    box-shadow: 0.125em 0.125em 0.5em rgba(0,0,0,0.2);
     margin-bottom: 0;
     position: absolute;
     z-index:5;
-    top: 2em;
-    left: 0;
-    border-top: 2px solid #ddd;
+    top: 2.3em;
+    left: -1em;
+    border: 1px solid #EA863A;
     display: none;
 }
 
@@ -1568,28 +1675,45 @@ main .breadcrumb a:hover {
 
 .share li {
     list-style: none;
-    padding: 0.5em;
+    padding: 0.5em 0em 0.5em 1.5em;
     margin: 0;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(234, 134, 58, 0.2);
     line-height: 1em;
     vertical-align: middle;
 }
 
 .share li:last-child {
     border:0;
+    padding: 0.5em 0em 0.3em 1.5em;
+}
+
+.arrow_box {
+    position: relative;
+    background: #fff;
+    border: 1px solid #EA863A;
+}
+.share ul:after, .share ul:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
 }
 
 .share ul:after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 0.5em solid transparent;
-    border-right: 0.5em solid transparent;
-    border-bottom: 0.5em solid #ddd;
-    position: absolute;
-    top: -11px;
-    left: 24px;
-
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 15px;
+    margin-left: -15px;
+}
+.share ul:before {
+    border-color: rgba(234, 134, 58, 0);
+    border-bottom-color: #EA863A;
+    border-width: 16px;
+    margin-left: -16px;
 }
 
 
@@ -1783,6 +1907,16 @@ footer .contact h2 {
 color: #fff;
 }
 
+.wagtail{
+    float: left;
+    opacity: 0.8;
+    margin: 1em 0 1em 0;
+}
+
+.wagtail2{
+    display: none;
+}
+
 .svg{
     display: none;
 }
@@ -1841,11 +1975,11 @@ footer .contact li i {
     float: left;
     margin: 0;
     margin-right: 0.5em;
-
 }
 
 footer .contact span {
     transition: all 0.2s ease;
+    font-size: 1em;
 }
 
 footer .contact a:hover span {
@@ -1869,6 +2003,7 @@ footer .offices li {
 
 footer .offices h3 {
     font-size: 1.5em;
+    font-weight: bold;
     font-family: "proxima-nova",helvetica,sans-serif;
     transition: all 0.2s ease;
 }
@@ -1877,10 +2012,14 @@ footer .offices li:hover h3 {
     color: #ea853a;
 }
 
+footer .offices h2{
+    display: none;
+}
+
 footer .vcard {
      transition: all 0.2s ease;
-     margin-top: -0.5em;
      overflow: hidden;
+     font-size: 0.9em;
 }
 
 footer .offices li:hover .vcard{
